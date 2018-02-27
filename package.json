@@ -1,0 +1,22 @@
+{
+  "name": "debug-tools",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "repository": "",
+  "author": "int0h <int0h@yandex.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^8.0.19",
+    "@types/tape": "^4.2.31",
+    "nyc": "^11.1.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  },
+  "keywords": [],
+  "typings": "./types/",
+  "scripts": {
+    "test": "tsc -p ./tests/tsconfig.json && node_modules/.bin/nyc ./node_modules/.bin/tape ./tests/dist/*.js | ./node_modules/.bin/tap-spec"
+  },
+  "dependencies": {}
+}
